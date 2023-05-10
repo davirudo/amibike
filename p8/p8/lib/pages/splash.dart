@@ -15,7 +15,17 @@ class Splash extends StatelessWidget {
           children: [
             
             
-            
+            SizedBox(height: 16),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Password',
+                hintText: 'Enter your password',
+                border: OutlineInputBorder(),
+                prefixIcon: Image.asset('assets/images/password.png',
+                    width: 10, height: 10),
+              ),
+              obscureText: true,
+            ),
             SizedBox(height: 50),
             ElevatedButton(
               onPressed: () {
