@@ -23,4 +23,44 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+  Card buildCard(String gambar, String judul, String isi) {
+    return Card(
+      // elevation: 3,
+      elevation: 3,
+      shadowColor: lightITColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Row(
+          children: [
+            Image.asset(
+              'assets/images/' + gambar + '.png',
+              width: 50,
+              height: 50,
+            ),
+            SizedBox(
+              width: 12,
+            ),
+            Column(
+              // menambahkan ca.start
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  judul,
+                  style: titleText,
+                ),
+                Text(
+                  isi,
+                  style: subtitleText,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
