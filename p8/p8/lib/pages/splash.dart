@@ -13,7 +13,13 @@ class Splash extends StatelessWidget {
           //padding buat bungkus di listview
           padding: EdgeInsets.all(25),
           children: [
-            
+            SizedBox(height: 100),
+            // image for logo
+            Image.asset(
+              'assets/images/logoputih.png',
+              width: 166,
+              height: 202,
+            ),
             SizedBox(height: 50),
             TextField(
               decoration: InputDecoration(
