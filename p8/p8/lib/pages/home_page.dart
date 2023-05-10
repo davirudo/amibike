@@ -16,6 +16,69 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
+                // menambahkan image profile (w:100, h:100)
+                Image.asset('assets/images/cowo.png', width: 100, height: 100),
+                SizedBox(
+                  height: 20,
+                ),
+                // menambahkan text profile (f: 20, c: white)
+                Text('Depit',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Color(0xffffffff),
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Poppins',
+                    )),
+                SizedBox(
+                  height: 2,
+                ),
+                // menambahkan username ig(f:16, c:lightblue)
+                Text('@depit_',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color(0xff9ED0FF),
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'Poppins',
+                    )),
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(40),
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      buildCard("nama", "Nama Lengkap", "David Diamanta"),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      buildCard("prodi", "Prodi", "Sistem Informasi"),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      buildCard("divisi", "Divisi", "Mobile Development"),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      buildCard("hobi", "Hobi", "Jogging"),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      buildCard("motto", "Motto",
+                          "Those who survive are those \nwho adapt"),
+                      SizedBox(
+                        height: 15,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
