@@ -16,7 +16,20 @@ class Splash extends StatelessWidget {
             
             
             
-            
+            SizedBox(height: 50),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: Text('Login'.toUpperCase()),
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xff7751DD), //warna button
+                minimumSize: Size(200, 40), //size w & h
+              ),
+            )
           ],
         ),
       ),
