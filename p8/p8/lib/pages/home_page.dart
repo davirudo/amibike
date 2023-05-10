@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ITColor,
+      backgroundColor: primaryColor,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -16,30 +16,34 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                // menambahkan image profile (w:100, h:100)
-                Image.asset('assets/images/cowo.png', width: 100, height: 100),
-                SizedBox(
-                  height: 20,
+                Card(
+                  elevation: 3,
+                  shadowColor: lightColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        Column(
+                          // menambahkan ca.start
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "David",
+                              style: titleText,
+                            ),
+                            Text(
+                              "12.3456.78",
+                              style: subtitleText,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                // menambahkan text profile (f: 20, c: white)
-                Text('Depit',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
-                    )),
-                SizedBox(
-                  height: 2,
-                ),
-                // menambahkan username ig(f:16, c:lightblue)
-                Text('@depit_',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Color(0xff9ED0FF),
-                      fontWeight: FontWeight.w400,
-                      fontFamily: 'Poppins',
-                    )),
                 SizedBox(
                   height: 30,
                 ),
@@ -55,24 +59,11 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      buildCard("nama", "Nama Lengkap", "David Diamanta"),
+                      buildCard("qr", "Nama Lengkap", "David"),
                       SizedBox(
                         height: 15,
                       ),
-                      buildCard("prodi", "Prodi", "Sistem Informasi"),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      buildCard("divisi", "Divisi", "Mobile Development"),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      buildCard("hobi", "Hobi", "Jogging"),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      buildCard("motto", "Motto",
-                          "Those who survive are those \nwho adapt"),
+                      buildCard("stnk", "Prodi", "Zamn"),
                       SizedBox(
                         height: 15,
                       ),
@@ -91,7 +82,7 @@ class HomePage extends StatelessWidget {
     return Card(
       // elevation: 3,
       elevation: 3,
-      shadowColor: lightITColor,
+      shadowColor: lightColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15),
       ),
