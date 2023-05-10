@@ -14,7 +14,16 @@ class Splash extends StatelessWidget {
           padding: EdgeInsets.all(25),
           children: [
             
-            
+            SizedBox(height: 50),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+                hintText: 'Enter your email',
+                border: OutlineInputBorder(),
+                prefixIcon: Image.asset('assets/images/email.png',
+                    width: 10, height: 10),
+              ),
+            ),
             SizedBox(height: 16),
             TextField(
               decoration: InputDecoration(
